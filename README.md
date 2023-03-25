@@ -7,7 +7,6 @@ The documentation is clear and easy to understand, with helpful comments and ann
 Whether you're building a new app from scratch or maintaining an existing one, ANR Detective is an invaluable tool for ensuring a smooth and responsive user experience.
 
 # Getting started
-### The library is not yet available on Maven Central. This will happen in the next few days.
 
 To start using ANR Detective in your project, add the dependency.
 
@@ -145,6 +144,9 @@ The ThreadAccessor executes code on the monitored thread at the specified interv
 
 ### Is there an additional load on the monitored thread?
 All checks happen on background threads. On the monitored thread, a callback is submitted to an ExecutorService of the library at the specified interval only. The additional load on the monitored thread is negligible.
+
+### Can I integrate the library into my existing monitoring/logging solution?
+Yes, as long as your solution supports the logging of Throwables. You can just log the BlockedThreadEvent in this case, since it inherits from Throwable. The stack trace contains the necessary information to investigate the event.
 
 # Contribution
 
