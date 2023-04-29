@@ -18,9 +18,9 @@ repositories {
 
 dependencies {
     // If you use java
-    implementation 'com.conena.anrdetective:anrdetective:1.0.0'
+    implementation 'com.conena.anrdetective:anrdetective:1.1.0'
     // If you use kotlin
-    implementation 'com.conena.anrdetective:anrdetective-kotlin:1.0.0'
+    implementation 'com.conena.anrdetective:anrdetective-kotlin:1.1.0'
 }
 ```
 # Usage (Kotlin)
