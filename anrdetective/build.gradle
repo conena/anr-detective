@@ -28,6 +28,6 @@ android {
 }
 
 dependencies {
-    api 'com.conena.therlock:therlock:1.0.0'
+    api 'com.conena.therlock:therlock:1.1.0'
     implementation "androidx.lifecycle:lifecycle-process:2.5.1"
 }
