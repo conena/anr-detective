@@ -1,6 +1,6 @@
 plugins {
-    id 'com.android.library'
-    id 'com.vanniktech.maven.publish'
+    alias libs.plugins.androidLibrary
+    alias libs.plugins.mavenPublish
 }
 
 android {
@@ -28,6 +28,6 @@ android {
 }
 
 dependencies {
-    api 'com.conena.therlock:therlock:1.1.0'
-    implementation "androidx.lifecycle:lifecycle-process:2.5.1"
+    api libs.therlock
+    implementation libs.androidx.lifecycle.process
 }

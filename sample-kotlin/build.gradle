@@ -1,6 +1,6 @@
 plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
+    alias libs.plugins.androidApplication
+    alias libs.plugins.kotlinAndroid
 }
 
 android {
@@ -33,15 +33,15 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
     }
 }
 
 dependencies {
-    implementation 'androidx.compose.material3:material3:1.0.1'
-    implementation 'androidx.activity:activity-compose:1.6.1'
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
+    implementation libs.androidx.appcompat
+    implementation libs.androidx.compose.activity
+    implementation libs.androidx.coreKtx
+    implementation libs.androidx.compose.material.material3
+    implementation libs.material
     implementation project(':anrdetective-kotlin')
 }
